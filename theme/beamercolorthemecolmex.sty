@@ -1,0 +1,85 @@
+\mode<presentation>
+
+% Settings
+\setbeamercolor*{title page header}{fg=white}
+\setbeamercolor*{author}{fg=white}
+\setbeamercolor*{date}{fg=white}
+\setbeamercolor{background canvas}{bg=white}
+
+\definecolor{wcprimary}{RGB}{94, 0, 43} %Colmex colour and shades below
+\definecolor{wcprimary140}{RGB}{56, 0, 26}
+\definecolor{wcprimary130}{RGB}{66, 0, 30}
+\definecolor{wcprimary120}{RGB}{75, 0, 34}
+\definecolor{wcprimary110}{RGB}{85, 0, 39}
+\definecolor{wcprimary40}{RGB}{191, 153, 170}
+\definecolor{wcprimary30}{RGB}{207, 179, 191}
+\definecolor{wcprimary20}{RGB}{223, 204, 213}
+\definecolor{wcprimary10}{RGB}{239, 230, 234}
+
+% Boxes 
+\definecolor{wcalerted}{RGB}{0, 88, 143} %CEE
+\definecolor{wcexample}{RGB}{65, 157, 120} %Seaweed
+
+%Colours I like for boxes (coolors)
+\definecolor{HarvestOrange}{RGB}{255, 119, 0}
+\definecolor{VintageLavender}{RGB}{136, 88, 137}
+
+%Enumerate
+\setlist[enumerate]{label={\ifnum\@itemdepth=1\relax
+  \color{wcalerted}\else
+  \color{wcprimary}\fi\theenumi.}}
+
+%Itemize
+\setlist[itemize]{label=\color{wcprimary}$\bullet$}
+
+%alerted text color
+\setbeamercolor{alerted text}{fg=wcalerted}
+
+% Turn off shading for block title when rounded=true (by default, rounded = false)
+\makeatletter
+\pgfdeclareverticalshading[lower.bg,upper.bg]{bmb@transition}{200cm}{%
+  color(0pt)=(lower.bg); color(4pt)=(lower.bg); color(4pt)=(upper.bg)}
+
+% Change block title background to wcprimary and body bg to wcprimary10
+\setbeamercolor{block title}{fg=white,bg=wcprimary}
+\setbeamercolor{block body}{parent=normal text,fg=black,bg=wcprimary10}
+
+% Change the alertblock title background to alerted text color
+\setbeamercolor{block title alerted}{fg=white,bg=wcalerted}
+\setbeamercolor{block body alerted}{fg=black,bg=wcalerted!10}
+
+% Change the exampleblock title background to greens
+\setbeamercolor{block title example}{fg=white,bg=wcexample}
+\setbeamercolor{block body example}{fg=black,bg=wcexample!10}
+
+% Change caption text color to wcprimary
+\setbeamercolor{caption name}{fg=wcprimary}
+
+\setbeamercolor{button}{fg=white,bg=wcprimary}
+\setbeamercolor{button border}{fg=wcprimary}
+% \setbeamertemplate{button}{%
+%   \tikz[baseline=(btn.base)]{
+%     \node[
+%       rectangle,
+%       rounded corners=2.5pt,
+%       inner xsep=7pt,
+%       inner ysep=3.5pt,
+%       draw=blue!55!black,
+%       fill=wcprimary,
+%       text=white,
+%       font=\footnotesize\bfseries
+%     ] (btn) {\insertbuttontext};
+%   }%
+% }
+
+% Change color of toc text to wcprimary
+\setbeamercolor{section in toc}{fg=wcprimary}
+
+% Ensure continuation text is white (for allowframebreaks)
+\setbeamercolor{frametitle continuation}{fg=wcprimary}
+
+% Set framtitle color to wcprimary
+\setbeamercolor{frametitle}{fg=wcprimary}
+
+\mode
+<all>

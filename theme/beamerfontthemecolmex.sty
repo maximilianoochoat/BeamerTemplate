@@ -1,0 +1,83 @@
+% Font theme.
+% Controlled by the font= option
+
+\mode<presentation>
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%% font=noto — Noto Sans
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\wc@tmp{noto}
+\ifx\wc@fontopt\wc@tmp
+
+\RequirePackage[sf]{noto}
+
+\newfontfamily\NotoRegular{NotoSans}[
+    UprightFont    = *-Regular,
+    ItalicFont     = *-Italic,
+    BoldFont       = *-SemiBold,
+    BoldItalicFont = *-SemiBoldItalic,
+]
+
+\newfontfamily\NotoLight{NotoSans}[
+    UprightFont    = *-Light,
+    ItalicFont     = *-LightItalic,
+    BoldFont       = *-Regular,
+    BoldItalicFont = *-Italic,
+]
+
+\newfontfamily\NotoExtraLight{NotoSans}[
+    UprightFont    = *-ExtraLight,
+    ItalicFont     = *-ExtraLightItalic,
+    BoldFont       = *-Light,
+    BoldItalicFont = *-LightItalic,
+]
+
+\setbeamerfont{title}{family=\NotoRegular, size=\LARGE}
+\setbeamerfont{author}{family=\NotoLight, size=\small}
+\setbeamerfont{frametitle}{family=\NotoLight, size=\Large}
+\setbeamerfont{section}{family=\NotoExtraLight, size=\LARGE}
+
+\setsansfont{NotoSans}[
+    UprightFont    = *-ExtraLight,
+    ItalicFont     = *-ExtraLightItalic,
+    BoldFont       = *-Light,
+    BoldItalicFont = *-LightItalic,
+]
+
+\fi
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+% Geomanist
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\def\wc@tmp{geo}
+\ifx\wc@fontopt\wc@tmp
+
+\newfontfamily\GeomanistMedium[
+    Path=fonts/Geomanist/,
+    Extension=.otf
+]{Geomanist-Medium}
+
+\newfontfamily\GeomanistLight[
+    Path=fonts/Geomanist/,
+    Extension=.otf
+]{Geomanist-Light}
+
+\setbeamerfont{title}{family=\GeomanistMedium, size=\LARGE}
+\setbeamerfont{author}{family=\GeomanistLight, size=\small}
+\setbeamerfont{frametitle}{family=\GeomanistMedium, size=\Large}
+\setbeamerfont{section}{family=\GeomanistLight, size=\LARGE}
+
+\setsansfont[
+    Path           = fonts/Geomanist/,
+    UprightFont    = *-Regular,
+    ItalicFont     = *-Regular-Italic,
+    BoldFont       = *-Bold,
+    BoldItalicFont = *-BoldItalic,
+    Extension      = .otf,
+]{Geomanist}
+
+\fi
+
+\mode<all>

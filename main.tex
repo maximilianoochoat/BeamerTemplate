@@ -1,0 +1,114 @@
+% Author: Maximiliano Ochoa Trancoso (Colegio de México)
+% Modified template from Aaron Wolf (Northwestern University)
+\documentclass[aspectratio=169]{beamer}
+\makeatletter
+\def\input@path{{theme/}}
+\makeatother
+
+\title{Metodología de la Investigación}
+\date{Agosto 2026}
+\author{Maximiliano Ochoa Trancoso}
+
+% Theme options:
+% \usetheme[
+%           pattern=triangle,
+%           color=wcprimary,
+%           font=geo,
+%           agendastyle=pattern,
+%           breadcrumb=on
+%   ]{colmex}
+% pattern: facet (default), facetrand, triangle , triangleiso, trianglemesh,
+%          squares, circles, hexraise, hexrand, network, quilt, plain 
+% There are some issues with the compilation time of some patterns
+% color: any named color 
+% font: noto (Noto Sans), Geomanist (default) or installed (system fonts)
+% agendastyle: plain  or pattern (default)
+% breadcrumb: on or none (default)
+\usetheme{colmex}
+
+    \titlegraphic{
+        \makebox[\textwidth]{
+            \includegraphics[height=1.7cm]{logos/logoColmex.png}
+            \hfill \hspace{0.5cm}
+            \includegraphics[height=1.8cm]{logos/logoCEE.png}
+        }
+    }
+
+\begin{document}
+
+    \begin{frame}
+    \titlepage
+    \end{frame}
+    
+
+
+    \begin{frame}[plain]
+        \tableofcontents
+    \end{frame}
+
+\section{Blocks}
+
+    \begin{frame}{Blocks}
+        
+        \begin{block}{Primary Block}
+            The standard Beamer \texttt{block} environment uses the material-style outlined box with a floating title label.
+        \end{block}
+        \begin{alertblock}{Alert Block}
+            \texttt{alertblock} uses the theme alert color.
+        \end{alertblock}
+        \begin{exampleblock}{Example Block}
+            \texttt{exampleblock} uses the theme example color.
+        \end{exampleblock}
+    
+    \end{frame}
+    
+    \begin{frame}{Blocks}
+        \begin{palertblock}{Pattern Alert Block}
+            Patterned alert block.
+        \end{palertblock}
+        \begin{pexampleblock}{Pattern Example Block}
+            Patterned example block.
+        \end{pexampleblock}
+        \begin{pblock}{Pattern Block}
+        If you want to use the main background pattern inside a tcolorbox, the theme also includes \texttt{pblock}, \texttt{palertblock}, and \texttt{pexampleblock}.
+        \end{pblock}
+    \end{frame}
+    
+    \begin{frame}{Custom Block Colors}
+        \begin{mblock}[colframe=HarvestOrange,coltitle=HarvestOrange]{Custom Block}
+            This block uses a custom color.
+        \end{mblock}
+        \begin{pblock}[VintageLavender]{Custom Pattern Block}
+            This patterned block uses a custom color.
+        \end{pblock}
+    \end{frame}
+
+\section{Frames}
+    
+% Blank Frame
+    \begin{frame}[plain]{}
+        The \texttt{[plain]} option produces a fully blank frame with no header, footer, or background. Use it for title cards, full-bleed figures, or transition slides:
+        \\ ~ \\
+        \texttt{\textbackslash begin\{frame\}[plain]\{\}} \\
+        \texttt{...} \\
+        \texttt{\textbackslash end\{frame\}}
+    \end{frame}
+
+    
+% Standout frame
+    \begin{frame}{Standout Slides}
+        The \texttt{\textbackslash standout\{\}} command creates a full-pattern slide with centered white text — useful for section breaks, closing slides, or emphasis.
+        \\ ~ \\
+        \scriptsize
+        \texttt{\textbackslash standout\{Appendix\}}
+        \normalsize
+    \end{frame}
+    
+    \standout{Appendix}
+
+\appendix
+
+
+
+
+\end{document}
